@@ -1,27 +1,58 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+/* Reset documento */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  overflow-x: hidden; 
+  min-height: 100vh;
+  background-color: rgb(255, 255, 255);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Barra de navegacion */
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(247, 228, 223);
+  position: fixed;
+  width: 100%;
+}
+
+/* Enlace logo */
+
+.logo {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  color: rgb(176, 38, 38);
+}
+
+/* Enlaces de navegacion */
+
+.menu {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;  
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 50px;
+ 
+}
+
+.enlaces {
+  color: rgb(176, 38, 38);
+}
+
+.enlaces:hover {
+  color: rgb(0, 0, 0);
 }
