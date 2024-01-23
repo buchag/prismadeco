@@ -3,13 +3,23 @@ const carousel_settings = {
     dots: true,
     infinite: true,
     speed: 2500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 5,
+    slidesToScroll: 5,
     autoplay: true,
     autoplaySpeed: 5000,
     centerMode: false, // Habilita el modo centrado
     adaptiveHeight: true, // Habilita la altura del contenedor
     responsive: [
+      {
+        breakpoint: 1510,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          centerMode: false,
+          infinite: true,
+          dots: false
+        }
+      },
         {
           breakpoint: 1210,
           settings: {
