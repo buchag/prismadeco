@@ -12,8 +12,8 @@ const Card = ({product}) => {
         <figure className='w-auto h-auto rounded-lg flex flex-col'>
             <Image src={image} alt={title} width={350} height={400} style={{borderTopLeftRadius: "12px", borderTopRightRadius: "12px"}}/>
             <div>
-                <h2 className='text-left text-xl my-1 mx-2'>{title}</h2>
-                <h2 className='text-left text-xl my-1 mx-2'><b>${price}</b></h2>
+                <h2 className='text-left text-sm my-1 mx-2'>{title}</h2>
+                <h2 className='text-left text-sm my-1 mx-2'><b>${price}</b></h2>
             </div>
             <Button btnText="Comprar"/>
         </figure>
@@ -21,6 +21,16 @@ const Card = ({product}) => {
         <style jsx>{`
             figure {
                 box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.4);
+            }
+            @media screen and (min-width: 768px) {
+                h2 {
+                    font-size: 1.6rem;
+                }}
+
+            @media screen and (min-width: 576px) {
+                h2 {
+                    font-size: 1rem;
+                }
             }
             `}</style> 
     </>

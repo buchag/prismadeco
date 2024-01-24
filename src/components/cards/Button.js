@@ -4,17 +4,23 @@ const Button = () => {
         
     return (
         <>
-            <button className="bg-zinc-500 text-white text-xl my-3 mx-24 scroll-px-12 scroll-py-0
-            rounded-2xl cursor-pointer whitespace-nowrap" >Comprar</button>
+            <button className="bg-zinc-500 text-white text-sm my-3 mx-auto py-1 px-5 hover:bg-zinc-600 hover:scale-105 hover:shadow-lg
+            rounded-lg cursor-pointer whitespace-nowrap" >Comprar</button>
 
             <style jsx>{`
                 button {
                     box-shadow: 2px 2px 2px black;
                 }
-                button:hover {
-                    transform: scale(1.1);
-                    transition: 0.2s;
-                    background-color: rgb(63 63 70);
+                @media sreen and (min-width: 1024px) {
+                    button {
+                        font-size: 1.6rem; 
+                    }
+                }
+                @media screen and (min-width: 640px) {
+                    button {
+                        font-size: 1rem;
+                    }
+                
             }
             `}</style>
         </>

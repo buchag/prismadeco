@@ -1,7 +1,6 @@
 
 import Card from "./Card";
-import { useState, useEffect } from "react";
-import axios from "axios";
+
 
 const products = [
     {
@@ -107,8 +106,8 @@ const CardList = () => {
             </div>
 
             <div>
-                <h2>Diseños Exclusivos</h2>
-                <h3>« Reinventa tus espacios »</h3>
+                <h2 className="title-card">Diseños Exclusivos</h2>
+                <h3 className="subtitle-card">« Reinventa tus espacios »</h3>
 
                 <div className="flex justify-between my-2 mx-auto">
                     <div className="cards-list grid md:grid-cols-3 sm:grid-cols-2 grid-cols-2 gap-x-8 gap-y-8 my-2 mx-auto">
@@ -120,7 +119,7 @@ const CardList = () => {
 
             <style jsx>{`
             div h2 {
-                font-size: 2.5rem;
+                font-size: 1.2rem;
                 font-family: "Monserrat", sans-serif;
                 font-weight: 500;
                 letter-spacing: 0.15rem;
@@ -129,10 +128,36 @@ const CardList = () => {
                 margin-top: 3rem;
             }
             div h3 {
-                font-size: 1rem;
+                font-size: 0.75rem;
                 font-family: "Monserrat", sans-serif;
                 color: #666666;
                 text-align: center;
+            }
+            @media screen and (min-width: 992px) {
+                div h2 {
+                    font-size: 2.8rem;
+                }
+                div h3 {
+                    font-size: 1.5rem;
+                }
+            }
+           
+            @media screen and (min-width: 768px) {
+                div h2 {
+                    font-size: 2.4rem;
+                }
+                div h3 {
+                    font-size: 1.25rem;
+                }
+            }
+
+            @media screen and (min-width: 576px) {
+                div h2 {
+                    font-size: 2rem;
+                }
+                div h3 {
+                    font-size: 1rem;
+                }
             }
             `}</style>
         </>
