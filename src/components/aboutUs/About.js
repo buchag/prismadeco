@@ -21,7 +21,9 @@ const About = () => {
             src="/81XYnQ6uyKL.jpg"
             alt="Descripción de la imagen"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className=" shadow-lg h-full object-contain object-left-top md:object-cover  "
+            priority
 
           />
        
