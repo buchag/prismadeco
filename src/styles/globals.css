@@ -9,50 +9,110 @@
   text-decoration: none;
 }
 
+
 body {
   overflow-x: hidden; 
   min-height: 100vh;
   background-color: rgb(255, 255, 255);
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Barra de navegacion */
-
-.nav-container {
+.nav-bar {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: rgb(247, 228, 223);
   position: fixed;
-  width: 100%;
+  background-color: #E3D4D0;
+  padding: 12px 30px 12px 10px;
+  z-index: 1;
+  margin-top: 3.2em;
 }
-
-/* Enlace logo */
 
 .logo {
   display: flex;
   align-items: center;
   column-gap: 10px;
-  color: rgb(176, 38, 38);
+  color: rgb(193, 42, 42);
 }
 
-/* Enlaces de navegacion */
+.cont-cart {
+  background-color: rgb(193, 42, 42);
+  color: white;
+  padding: 4px 6px;
+  text-align: center;
+  border-radius: 10px;
+}
 
 .menu {
   display: flex;
   align-items: center;
-  column-gap: 40px;  
+  column-gap: 30px;
+  padding-top: 8px;
+}
+
+.menu li a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
   font-weight: bold;
-  font-size: 16px;
-  margin-right: 50px;
- 
 }
 
-.enlaces {
-  color: rgb(176, 38, 38);
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1.7px;
+  background-color: rgb(193, 42, 42);
+  transition: 0.20s ease-in-out;
 }
 
-.enlaces:hover {
-  color: rgb(0, 0, 0);
+.menu li a:hover:after {width: 100%;}
+
+.open-menu , .close-menu {
+  position: absolute;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.open-menu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.close-menu {
+  top: 40px;
+  right: 20px;
+}
+
+#check {display: none;}
+
+@media only screen and (max-width: 780px) {
+.menu {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 100;
+  background-color: rgb(216, 202, 202);
+  transition: all 0.5s ease-in-out;
+
+}
+.menu li {
+  margin-top: 50px;
+}
+
+.open-menu , .close-menu {display: block;}
+
+#check:checked ~ .menu {right: 0;}
+
 }
