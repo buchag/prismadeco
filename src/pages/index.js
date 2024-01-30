@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import Carousel from '../components/carousel'
+import Carousel from '../components/carousel/carousel'
 
-const inter = Inter({ subsets: ['latin'] })
+//const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main>
+    <main background-color='red'>
       <Carousel/>
     </main>
   )

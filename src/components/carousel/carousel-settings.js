@@ -9,6 +9,7 @@ const carousel_settings = {
     autoplaySpeed: 5000,
     centerMode: false, // Habilita el modo centrado
     adaptiveHeight: true, // Habilita la altura del contenedor
+    lazyLoad: 'ondemand',
     responsive: [
       {
         breakpoint: 1510,
@@ -43,6 +44,7 @@ const carousel_settings = {
         {
           breakpoint: 705,
           settings: {
+            lazyLoading: 'ondemand',
             slidesToShow: 1,
             slidesToScroll: 1,
             centerMode: true,
