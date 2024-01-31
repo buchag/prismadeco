@@ -15,7 +15,7 @@ const Card = ({product}) => {
                 <h2 className='text-left text-sm my-1 mx-2'>{title}</h2>
                 <h2 className='text-left text-sm my-1 mx-2'><b>${price}</b></h2>
             </div>
-            <Button btnText="Comprar"/>
+            <Button />
         </figure>
 
         <style jsx>{`

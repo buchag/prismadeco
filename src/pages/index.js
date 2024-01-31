@@ -4,12 +4,10 @@ import CardList from '@/components/cards/CardList'
 
 const index = () => {
 
-  
-
   return (
-    <div>
+    <section>
       <CardList />
-    </div>
+    </section>
   )
 }
 
