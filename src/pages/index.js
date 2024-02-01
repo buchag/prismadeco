@@ -1,13 +1,24 @@
+
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Carousel from '../components/carousel/carousel'
 
 //const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+
+import CardList from '@/components/cards/CardList'
+
+const index = () => {
+
   return (
-    <main background-color='red'>
+    <main>
       <Carousel/>
-    </main>
+
+    <section>
+      <CardList />
+    </section>
+</main>
   )
 }
+
+export default index
