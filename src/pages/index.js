@@ -1,3 +1,4 @@
+dex = () => {
 
     import Image from 'next/image'
     import { Inter } from 'next/font/google'
@@ -15,15 +16,17 @@
     return (
       <main>
         <Carousel/>
+        <About />
 
-  
       <section>
         <CardList />
       </section>
+      <Us />
 
       <Footer/>
       
   </main>
 )
+
 }
 export default index
