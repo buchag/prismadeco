@@ -1,4 +1,4 @@
-dex = () => {
+
 
     import Image from 'next/image'
     import { Inter } from 'next/font/google'
@@ -16,7 +16,7 @@ dex = () => {
     return (
       <main>
         <Carousel/>
-        <About />
+        <About/>
 
       <section>
         <CardList />
