@@ -1,23 +1,28 @@
 
 
-import Footer from "../components/footer/Footer"
-import {Component} from 'react'
-
-
-
-
-export default function Home() {  
-  return (
-    <>
+    import Image from 'next/image'
+    import { Inter } from 'next/font/google'
+    import Carousel from '../components/carousel/carousel'
+    import CardList from '@/components/cards/CardList'
+    import Footer from "../components/footer/Footer"
+    import {Component} from 'react'
+    const inter = Inter({ subsets: ['latin'] })
     
-    <main>
-       <Footer/>
-    </main>
-    
+    //const inter = Inter({ subsets: ['latin'] })
+      
+    const index = () => {
+    return (
+      <main>
+        <Carousel/>
+
   
-    
-    </>
-    
-  )
-}
+      <section>
+        <CardList />
+      </section>
 
+      <Footer/>
+      
+  </main>
+)
+}
+export default index
