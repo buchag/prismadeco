@@ -1,6 +1,8 @@
 
 
     import Image from 'next/image'
+    import About from '@/components/aboutUs/About'
+    import Us from '@/components/aboutUs/Us'
     import { Inter } from 'next/font/google'
     import Carousel from '../components/carousel/carousel'
     import CardList from '@/components/cards/CardList'
