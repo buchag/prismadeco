@@ -29,11 +29,34 @@ module.exports = {
         'custom-gray': '#686D67', // Reemplaza este valor hexadecimal por el color exacto que necesitas
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-    },
-  },
+           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+       },
+     },
+   },
   plugins: [],
-}
+ } 
+// module.exports = {
+//   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+//   darkMode: false, // or 'media' or 'class'
+//   theme: {
+//     extend: {},
+//   },
+//   variants: {
+//     extend: {},
+//   },
+//   plugins: [],
+//   variants: {
+//     extend: {},
+//   },
+//   corePlugins: {
+//     preflight: false,
+//   },
+//   prefix: 'tw-',
+//   variants: {
+//     extend: {},
+//   },
+//   plugins: [],
+// }
+

@@ -9,6 +9,7 @@
     import Footer from "../components/footer/Footer"
     import {Component} from 'react'
     import axios from "axios";
+    import Home from '@/components/home/Home'
     const inter = Inter({ subsets: ['latin'] })
 
     
@@ -17,6 +18,7 @@
   const index = () => {
     return (
       <main>
+        <Home/>
         <Carousel/>
         <About/>
 
