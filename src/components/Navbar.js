@@ -1,8 +1,8 @@
-
 import prisma from "../images/logo_nav.png";
 import Image from "next/image";
 import { montserrat } from "../styles/fonts";
 import Link from "next/link";
+import carrito from "../images/shopping_cart.png"
 import logocerrar from "../../public/images/cerrar.svg";
 import logomenu from "../../public/images/icono.svg";
 
@@ -36,12 +36,22 @@ const Navbar = () => {
             </label>
           </ul>
 
+          <Link href="#Info-carrito">
+            <div className="itemcart">
+              <Image src={carrito} alt="Logo carrito" width={27} height={27} />
+              <h5>
+                <span className="contcart" style={montserrat.style}>
+                  0
+                </span>
+              </h5>
+            </div>
+          </Link>
+
           <label htmlFor="check" className="openmenu">
             <Image src={logomenu} width={25} />
           </label>
         </nav>
       </div>
-
     </>
   );
 };

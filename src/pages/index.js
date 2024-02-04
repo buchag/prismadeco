@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Banner from "@/components/Banner";
-import Shoppingcart from "@/components/Shoppingcart";
 
 export default function Home() {
   return (
@@ -14,8 +13,7 @@ export default function Home() {
 
       <main>
         <Banner />
-        <Navbar />   
-        <Shoppingcart /> 
+        <Navbar />
       </main>
     </>
   );

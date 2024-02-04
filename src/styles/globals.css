@@ -40,24 +40,6 @@ body {
   padding-top: 8px;
 }
 
-.itemcart {
-  display: flex;
-  position: fixed;
-  top: 70px;
-  right: 0;
-  margin-right: 30px;
-  visibility: visible;
-  z-index: 1;
-}
-
-.contcart {
-  background-color: #727D71;
-  color: white;
-  padding: 4px 6px;
-  text-align: center;
-  border-radius: 10px;
-}
-
 .menu li a {
   display: inline-block;
   color: #646c64;
@@ -66,6 +48,24 @@ body {
   position: relative;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.itemcart {
+  display: flex;
+  position: fixed;
+  top: 70px;
+  right: 0;
+  margin-right: 35px;
+  visibility: visible;
+  z-index: 2;
+}
+
+.contcart {
+  background-color: #727d71;
+  color: white;
+  padding: 4px 6px;
+  text-align: center;
+  border-radius: 10px;
 }
 
 .menu li a:after {
@@ -117,7 +117,7 @@ body {
   position: fixed;
   top: 0px;
   right: -100%;
-  z-index: 100;
+  z-index: 300;
   background-color: rgb(241, 241, 241);
   transition: all 0.5s ease-in-out;
   padding-bottom: 200px;
@@ -133,7 +133,6 @@ body {
 
 .itemcart {
   margin-right: 50px;
-
 }
 
 .openmenu , .closemenu {
@@ -141,7 +140,7 @@ body {
 }
 
 #check:checked ~ .menu {
-
-    right: 0;}
+  right: 0;
+}
 
 }
