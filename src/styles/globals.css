@@ -98,6 +98,12 @@ body {
 
 #check {display: none;}
 
+/* <<<<<< Link redes sociales >>>>>> */
+
+.redes {
+  visibility: hidden;
+  display: none;
+}
 
 /* <<<<<< Link carrito de compras >>>>>> */
 
@@ -126,7 +132,7 @@ body {
 .menu {
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: first baseline;
   width: 75%;
   height: 100%;
   position: fixed;
@@ -135,19 +141,33 @@ body {
   z-index: 300;
   background-color: rgb(241, 241, 241);
   transition: all 0.5s ease-in-out;
-  padding-bottom: 200px;
+  padding-top: 100px;
+
 }
 
 .menu li {
-  margin-top: 40px;
-
+  margin-top: 50px;
 }
-.menu li a{
-  color: rgb(0, 0, 0);
+
+.menu li a::after {
+  content: none;
 }
 
 .itemcart {
   margin-right: 50px;
+}
+
+.redes {
+  visibility: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.redes li a {
+  margin-top: 20px;
+  margin-inline: 15px;
 }
 
 .openmenu , .closemenu {
@@ -159,3 +179,4 @@ body {
 }
 
 }
+
