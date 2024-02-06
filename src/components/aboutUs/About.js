@@ -8,7 +8,7 @@ import Head from 'next/head'
 const About = () => {
   return (
     <>
-    <section className='mt-32 h-1/6 md:h-1/4  w-full grid grid-cols-1 md:grid-cols-2  '>
+    <section className='mt-32 h-1/6 md:h-1/4  w-full grid grid-cols-1 md:grid-cols-2'>
       <div className='bg-custom-gray p-6 '>
         <h2 className='text-2xl md:text-4xl pt-5 pb-5 md:pt-14 md:pb-10 text-center leading-10 text-gray-100' style={{ fontFamily: "'Montserrat', sans-serif" }}>¡Hola, somos Prismadeco!</h2>
 

@@ -1,14 +1,14 @@
-import prisma from "../images/logo_nav.png";
+import prisma from "../../images/logo_nav.png";
 import Image from "next/image";
-import { montserrat } from "../styles/fonts";
+import { montserrat } from "../../styles/fonts";
 import Link from "next/link";
-import carrito from "../images/shopping_cart.png";
-import logocerrar from "../../public/images/cerrar.svg";
-import logomenu from "../../public/images/icono.svg";
-import iconofacebook from "../../public/images/facebook.svg";
-import iconoinstagram from "../../public/images/instagram.svg";
-import iconotwitter from "../../public/images/twitter.svg";
-import iconotiktok from "../../public/images/tiktok.svg";
+import carrito from "../../images/shopping_cart.png";
+import logocerrar from "../../../public/images/cerrar.svg";
+import logomenu from "../../../public/images/icono.svg";
+import iconofacebook from "../../../public/images/facebook.svg";
+import iconoinstagram from "../../../public/images/instagram.svg";
+import iconotwitter from "../../../public/images/twitter.svg";
+import iconotiktok from "../../../public/images/tiktok.svg";
 
 const Navbar = () => {
   return (
@@ -16,7 +16,8 @@ const Navbar = () => {
       <div className="navegacion">
         <Link href="/" className="logo">
           <Image src={prisma} width={55} />
-          <h2 className={montserrat.className}>PRISMA DECO</h2>
+          {/*<h2 className={montserrat.className}>PRISMA DECO</h2> */}
+          
         </Link>
 
         {/* Barra de navegacion */}
@@ -91,16 +92,16 @@ const Navbar = () => {
           {/* Link carrito de compras */}
           <Link href="#Info-carrito">
             <div className="itemcart">
-              <Image src={carrito} alt="Logo carrito" width={27} height={27} />
-              <h5>
-                <span className="contcart" style={montserrat.style}>
+              <Image src={carrito} alt="Logo carrito" width={25} height={25} />
+              <h6 className={montserrat.className}>
+                <span className="contcart" >
                   0
                 </span>
-              </h5>
+              </h6>
             </div>
           </Link>
 
-          {/* Menu hamburguesa */ }
+          {/* Menu hamburguesa */}
           <label htmlFor="check" className="openmenu">
             <Image src={logomenu} width={25} />
           </label>
