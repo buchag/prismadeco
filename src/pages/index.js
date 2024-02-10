@@ -11,6 +11,7 @@ import axios from "axios";
 import Home from "@/components/home/Home";
 import Navbar from "@/components/header/Navbar";
 import Banner from "@/components/header/Banner";
+
 const inter = Inter({ subsets: ["latin"] });
 
 const index = () => {
@@ -27,22 +28,17 @@ const index = () => {
       <main>
         <Banner />
         <Navbar />
-
         <Home />
 
+        <section id="servicios">
+          <Carousel />
+        </section>
 
-        <div id="servicios">
-        <Carousel />
+        <section id="nosotros">
+          <About />
+        </section>
 
-
-        </div>
-
-      
-      
-
-        <About />
-
-        <section>
+        <section id="productos">
           <CardList />
         </section>
         <Us />

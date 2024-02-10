@@ -16,8 +16,7 @@ const Navbar = () => {
       <div className="navegacion">
         <Link href="/" className="logo">
           <Image src={prisma} width={55} />
-          {/*<h2 className={montserrat.className}>PRISMA DECO</h2> */}
-          
+           <p className={montserrat.className}>PRISMA DECO</p>
         </Link>
 
         {/* Barra de navegacion */}
@@ -28,17 +27,17 @@ const Navbar = () => {
               <Link href="/">Home</Link>
             </li>
             <li>
+              <Link href="#servicios">Servicios</Link>
+            </li>
+            <li>
               <Link href="#nosotros">Nosotros</Link>
             </li>
             <li>
               <Link href="#productos">Productos</Link>
             </li>
-            <li>
-              <Link href="#servicios">Servicios</Link>
-            </li>
 
             <label htmlFor="check" className="closemenu">
-              <Image src={logocerrar} width={25} />
+              <Image src={logocerrar} width={23} />
             </label>
 
             {/* Barra de navegacion, redes sociales */}
@@ -94,16 +93,14 @@ const Navbar = () => {
             <div className="itemcart">
               <Image src={carrito} alt="Logo carrito" width={25} height={25} />
               <h6 className={montserrat.className}>
-                <span className="contcart" >
-                  0
-                </span>
+                <span className="contcart">0</span>
               </h6>
             </div>
           </Link>
 
           {/* Menu hamburguesa */}
           <label htmlFor="check" className="openmenu">
-            <Image src={logomenu} width={25} />
+            <Image src={logomenu} width={23} />
           </label>
         </nav>
       </div>
