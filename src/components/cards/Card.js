@@ -1,7 +1,7 @@
 
 import Button from './Button';
 import Image from 'next/image';
-
+import Modal from './Modal';
 
 const Card = ({product}) => {
 
@@ -9,13 +9,13 @@ const Card = ({product}) => {
 
     return (
     <>
-        <figure className='w-auto h-auto rounded-lg flex flex-col'>
+        <figure className='bg-white w-auto h-auto rounded-xl flex flex-col'>
             <Image src={image} alt={title} width={350} height={400} style={{borderTopLeftRadius: "12px", borderTopRightRadius: "12px"}}/>
             <div>
                 <h2 className='text-left text-sm my-1 mx-2'>{title}</h2>
                 <h2 className='text-left text-sm my-1 mx-2'><b>${price}</b></h2>
             </div>
-            <Button />
+           <Modal key={product.id} product={product}/>
         </figure>
 
         <style jsx>{`

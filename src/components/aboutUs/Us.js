@@ -8,7 +8,7 @@ import { faClock, faHandHoldingHeart, faTruck } from '@fortawesome/free-solid-sv
 const Us = () => {
     return (
         
-            <section className='mt-20 mb-16 h-[350px] relative md:h-[398px] overflow-hidden flex flex-col  bg-cover  bg-center bg-fixed' style={{ backgroundImage: "url('/maiar-shalaby-iXcSt4HEqQ4-unsplash-scaled.jpg')" }}>
+            <section className='mt-20 mb-1 h-[350px] relative md:h-[398px] overflow-hidden flex flex-col  bg-cover  bg-center bg-fixed' style={{ backgroundImage: "url('/maiar-shalaby-iXcSt4HEqQ4-unsplash-scaled.jpg')" }}>
                 <div className="absolute inset-0 bg-black opacity-50"></div>
                 <div className='relative z-10'>
                     <h2 className='text-center text-4xl pt-10 mt-10 pb-5 text-gray-100'>Nuestro diferencial</h2>

@@ -10,21 +10,21 @@
     {
         "id": 1000002,
         "image": "/images/esp-rect-rep.jpg",
-        "title": "Espejo rectangular repartido",
+        "title": "Espejo Rectangular repartido",
         "price": 163500,
         "featured": true
     },
     {
         "id": 1000003,
         "image": "/images/esp-recta-60100.jpeg",
-        "title": "Espejo rectangular 60x100",
+        "title": "Espejo Rectangular 60x100",
         "price": 73150,
         "featured": false
     },
     {
         "id": 1000004,
         "image": "/images/esp-hexag.jpeg",
-        "title": "Espejos hexagonales",
+        "title": "Espejo Hexagonal",
         "price": 163500,
         "featured": true
     },
@@ -45,14 +45,14 @@
     {
         "id": 1000007,
         "image": "/images/esp-recta-r7090.jpeg",
-        "title": "Esp.Rectangular Repartido. 70x90",
+        "title": "Espejo Repartido 70x90",
         "price": 69900,
         "featured": false
     },
     {
         "id": 1000008,
         "image": "/images/esp-recta-r90180.jpg",
-        "title": "Esp.Rectangular Repartido. 90x180",
+        "title": "Espejo Repartido 90x180",
         "price": 118800,
         "featured": true
     },

@@ -1,11 +1,9 @@
 
-
-const Button = () => {
-        
+const Button = ({ onClick }) => {
     return (
         <>
             <button className="bg-zinc-500 text-white text-sm my-3 mx-auto py-1 px-5 hover:bg-zinc-600 hover:scale-105 hover:shadow-lg
-            rounded-lg cursor-pointer whitespace-nowrap" >Comprar</button>
+            rounded-lg cursor-pointer whitespace-nowrap" onClick={ onClick }>Comprar</button>
 
             <style jsx>{`
                 button {

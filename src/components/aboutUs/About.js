@@ -1,6 +1,3 @@
-
-
-
 import React from 'react'
 import Image from 'next/image'
 import Head from 'next/head'
@@ -8,7 +5,7 @@ import Head from 'next/head'
 const About = () => {
   return (
     <>
-    <section className='mt-32 h-1/6 md:h-1/4  w-full grid grid-cols-1 md:grid-cols-2  '>
+    <section className='mt-16 h-1/6 md:h-1/4  w-full grid grid-cols-1 md:grid-cols-2 '>
       <div className='bg-custom-gray p-6 '>
         <h2 className='text-2xl md:text-4xl pt-5 pb-5 md:pt-14 md:pb-10 text-center leading-10 text-gray-100' style={{ fontFamily: "'Montserrat', sans-serif" }}>¡Hola, somos Prismadeco!</h2>
 
@@ -16,17 +13,17 @@ const About = () => {
         <p className='pt-5 pb-10 tracking-wide text-slate-100 md:pb-20 text-sm md:text-base text-center leading-5 md:leading-7' style={{ fontFamily: "'Montserrat', sans-serif" }}>¡Desde ya les agradecemos la confianza en todo nuestro equipo y esperamos nos tengan por siempre dándole vida a sus hogares!</p>
 
       </div>
-      <div className='min-h-72 min-w-44 md:h-auto w-full  bg-white relative '>
-
+    {/* <div className='min-h-72 min-w-44 md:h-auto w-full  bg-white relative '>*/}
+    <div className='min-h-30 min-w-44 md:h-auto w-full bg-white relative '>
          <Image
             src="/81XYnQ6uyKL.jpg"
+           /* src="/Ubicacion.png"*/
             alt="Descripción de la imagen"
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className=" shadow-lg h-full object-contain object-left-top md:object-cover  "
+            className=" shadow-lg h-full object-contain object-left-top md:object-cover"
             priority
           />
-       
       </div>
     </section>
 </>

@@ -7,7 +7,7 @@ const Footer = () => {
     <footer>
       <div className="container-footer">
     
-           <div className="container-principal">
+      <div className="container-principal">
 
               <div className="column">
                 <div className="title"><h2>Nuestros Productos</h2></div>
@@ -35,15 +35,15 @@ const Footer = () => {
                 </div>
               </div>
 
-               <div className="column">
+              <div className="column">
                 <div className="title"><h2>Contacto</h2></div>
                 <br></br>
                     <div className="item"> 
-                       <p>
-                       <img src='./image/instagram.png'/> 
+                      <p>
+                        <img src='./image/instagram.png'/> 
                           PrismaDeco_
-                        </p>
-                        <br></br>
+                      </p>
+                      <br></br>
                     </div>
                     
                     <div className="item"> 

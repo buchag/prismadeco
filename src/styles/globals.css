@@ -39,3 +39,11 @@ body {
   }
 }
 
+.carrusel {
+  padding-top: 64px;
+}
+
+body{
+  /*background-color: #e5e3df;*/
+  background-image: linear-gradient(#e5e3df, #f0d9b4, #686d67e7);
+}
