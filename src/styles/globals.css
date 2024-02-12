@@ -18,11 +18,215 @@ body {
 @tailwind utilities;  */
 
 
+/* <<<<<< Reset documento >>>>>> */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  overflow-x: hidden; 
+  min-height: 100vh;
+  background-image: linear-gradient(#e5e3df, #f0d9b4, #686d67e7);
+  /*background-color: white;*/
+}
+
+
+/* <<<<<< Barra de navegacion >>>>>> */
+
+.navegacion {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eef2ec;
+  padding: 10px 100px 12px 10px;
+  z-index: 1;
+  margin-top: 3em;
+}
+
+
+/* <<<<<< Enlace logo >>>>>> */
+
+.logo {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  color: black;
+}
+
+p {
+  font-size: 1.2em;
+  padding-top: 8px;
+}
+
+
+/* <<<<<< Links >>>>>> */
+
+.menu {
+  display: flex;
+  column-gap: 30px;
+  padding-top: 8px;
+}
+
+.menu li a {
+  display: inline-block;
+  color: #646c64;
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold; 
+  font-size: 0.9em;
+}
+
+.menu li a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1.8px;
+  background-color: #727D71;
+  transition: 0.20s ease-in-out;
+}
+
+.menu li a:hover {
+  color: #000000;
+}
+
+.menu li a:hover:after {
+  width: 100%;
+}
+
+.openmenu , .closemenu {
+  position: absolute;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.openmenu {
+  top: 55%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
+.closemenu {
+  top: 40px;
+  right: 20px;
+}
+
+#check {display: none;}
+
+/* <<<<<< Link redes sociales >>>>>> */
+
+.redes {
+  visibility: hidden;
+  display: none;
+}
+
+/* <<<<<< Link carrito de compras >>>>>> */
+
+.itemcart {
+  display: flex;
+  position: fixed;
+  top: 4.2em;
+  right: 0;
+  margin-right: 2em;
+  visibility: visible;
+  z-index: 2;
+}
+
+.contcart {
+  background-color: #727d71;
+  color: white;
+  padding: 4px 6px;
+  border-radius: 10px;
+}
+
+
+/* <<<<<< Responsividad >>>>>> */
+
+@media only screen and (max-width: 790px) {
+.menu {
+  flex-direction: column;
+  align-items: center;
+  justify-content: first baseline;
+  width: 75%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  right: -100%;
+  z-index: 300;
+  background-color: rgb(241, 241, 241);
+  transition: all 0.5s ease-in-out;
+  padding-top: 100px;
+}
+
+@media (max-width: 768px) {
+  .component-home {
+    flex-direction: column;
+  }
+}
+
+.menu li {
+  margin-top: 50px;
+}
+
+.menu li a::after {
+  content: none;
+}
+
+.itemcart {
+  margin-right: 50px;
+  top: 4.7em;
+
+}
+
+.navegacion {
+  margin-top: 3.4em;
+}
+
+
+.redes {
+  visibility: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.redes li a {
+  margin-top: 20px;
+  margin-inline: 15px;
+}
+
+.openmenu , .closemenu {
+  display: block;
+}
+
+#check:checked ~ .menu {
+  right: 0;
+}
+
+}
+
+.carrusel {
+  padding-top: 64px;
+}
+
 .component-home {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 2rem;
+  padding: 6rem;
+
 }
 
 .component-home img {
@@ -31,19 +235,3 @@ body {
   object-fit: cover;
 }
 
-/* Responsive styles */
-
-@media (max-width: 768px) {
-  .component-home {
-    flex-direction: column;
-  }
-}
-
-.carrusel {
-  padding-top: 64px;
-}
-
-body{
-  /*background-color: #e5e3df;*/
-  background-image: linear-gradient(#e5e3df, #f0d9b4, #686d67e7);
-}

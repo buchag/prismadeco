@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { CartContext } from '../cart/cartContext';
 
-const Modal = ({product}) => { 
+const Modal = ({product, addToCart}) => { 
   const {id, price, title, image} = product
   const [selectedNumber, setSelectedNumber] = useState(1);
   const [priceXqty, updatedPrice] = useState(price);
@@ -12,13 +12,11 @@ const Modal = ({product}) => {
   };
   const [abrir, setShowModal] = useState(false);
 
-  const { dispatch } = useContext(CartContext);
   const [quantity, setQuantity] = useState(1);
 
-  const addToCart = () => {
-    dispatch({ type: 'ADD_TO_CART', payload: { id: product.id, quantity } });
-    alert("Producto agregado al carrito!");
-    setShowModal(false);
+  const handleAddToCart = () => {
+    addToCart(product);
+    //setShowModal(false) // Cerrar el modal después de agregar el producto al carrito
   };
 
   return (
@@ -73,7 +71,7 @@ const Modal = ({product}) => {
                   </button>
                   <button
                     className="text-white bg-yellow-500 active:bg-yellow-700 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-                    type="button" onClick={() => addToCart(id)}>
+                    type="button" onClick={() => handleAddToCart(product)}>
                     Agregar al carro
                   </button>
                 </div>
