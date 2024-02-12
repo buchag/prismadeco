@@ -1,4 +1,4 @@
-/*@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -12,10 +12,10 @@
 
 body {
   font-family: var(--font-principal);
-  ;
+  background-image: linear-gradient(#e5e3df, #f0d9b4, #686d67e7);
 }
 
-@tailwind utilities;  */
+@tailwind utilities; 
 
 
 /* <<<<<< Reset documento >>>>>> */
@@ -210,4 +210,9 @@ p {
 
 }
 
+/* <<<<<< Home >>>>>> */
 
+.home {
+  padding-top: 110px;
+  margin-bottom: -4rem;
+}

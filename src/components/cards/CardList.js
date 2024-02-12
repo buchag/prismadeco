@@ -10,38 +10,40 @@ const CardList = () => {
     const [db, setDb] = useState(initialDb)
 
     const readData = async () => {
-        const ENDPOINT = {products: "http://localhost:7000/products"}
+        const ENDPOINT = { products: "http://localhost:7000/products" }
         const responseProducts = await axios.get(ENDPOINT.products);
         const db = responseProducts.data;
-        
+
         setDb(db);
     }
     useEffect(() => {
         readData()
     }, [])
-    
+
     return (
         <>
-            <div>
-                <h2>Articulos Destacados</h2>
-                <h3>«Los más elegidos por nuestros clientes »</h3>
+            <div className="home">
+                <div className="pb-5">
+                    <h2>Articulos Destacados</h2>
+                    <h3>«Los más elegidos por nuestros clientes »</h3>
 
-                <div className="flex justify-between my-2 mx-auto">
-                    <div className="cards-list grid md:grid-cols-3 sm:grid-cols-2 grid-cols-2 gap-x-8 gap-y-8 my-2 mx-auto">
-                        {db.filter((product) => (product.featured === true)).map((product, id) =>
-                            <Card key={id} product={product} />)}
+                    <div className="flex justify-between my-2 mx-auto">
+                        <div className="cards-list grid md:grid-cols-3 sm:grid-cols-2 grid-cols-2 gap-x-8 gap-y-8 my-2 mx-auto">
+                            {db.filter((product) => (product.featured === true)).map((product, id) =>
+                                <Card key={id} product={product} />)}
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div>
-                <h2 className="title-card">Diseños Exclusivos</h2>
-                <h3 className="subtitle-card">« Reinventa tus espacios »</h3>
+                <div className="pb-5">
+                    <h2 className="title-card">Diseños Exclusivos</h2>
+                    <h3 className="subtitle-card">« Reinventa tus espacios »</h3>
 
-                <div className="flex justify-between my-2 mx-auto">
-                    <div className="cards-list grid md:grid-cols-3 sm:grid-cols-2 grid-cols-2 gap-x-8 gap-y-8 my-2 mx-auto">
-                        {db.filter((product) => (product.featured === false)).map((product, id) =>
-                            <Card key={id} product={product} />)}
+                    <div className="flex justify-between my-2 mx-auto">
+                        <div className="cards-list grid md:grid-cols-3 sm:grid-cols-2 grid-cols-2 gap-x-8 gap-y-8 my-2 mx-auto">
+                            {db.filter((product) => (product.featured === false)).map((product, id) =>
+                                <Card key={id} product={product} />)}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -54,7 +56,7 @@ const CardList = () => {
                 letter-spacing: 0.15rem;
                 color: black;
                 text-align: center;
-                margin-top: 3rem;
+                
             }
             div h3 {
                 font-size: 0.75rem;

@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className="navegacion">
         <Link href="/" className="logo">
           <Image src={prisma} width={55} />
-           <p className={montserrat.className}>PRISMA DECO</p>
+           <p className={montserrat.className}><b>Prisma deco</b></p>
         </Link>
 
         {/* Barra de navegacion */}
@@ -104,6 +104,11 @@ const Navbar = () => {
           </label>
         </nav>
       </div>
+      <style jsx>{`
+      div p {
+        color: #646c64;
+      };
+      `}</style>
     </>
   );
 };

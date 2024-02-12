@@ -28,7 +28,9 @@ const index = () => {
       <main>
         <Banner />
         <Navbar />
-        <Home />
+        <div className="home">
+          <Home />
+        </div>
 
         <section id="servicios">
           <Carousel />

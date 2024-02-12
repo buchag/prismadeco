@@ -9,7 +9,7 @@ const Card = ({product}) => {
 
     return (
     <>
-        <figure className='w-auto h-auto rounded-lg flex flex-col'>
+        <figure className='bg-white w-auto h-auto rounded-xl flex flex-col'>
             <Image src={image} alt={title} width={350} height={400} style={{borderTopLeftRadius: "12px", borderTopRightRadius: "12px"}}/>
             <div>
                 <h2 className='text-left text-sm my-1 mx-2'>{title}</h2>
