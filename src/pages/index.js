@@ -9,6 +9,7 @@ import About from "@/components/aboutUs/About";
 import CardList from "@/components/cards/CardList";
 import Us from "@/components/aboutUs/Us";
 import Footer from "../components/footer/Footer";
+import { CartProvider } from './../context/CartContext';
 const inter = Inter({ subsets: ["latin"] });
 
 const index = () => {
@@ -30,9 +31,12 @@ const index = () => {
       <section id="nosotros">
           <About />
       </section>
-      <section id="productos">
+      <CartProvider>
+        <section id="productos">
           <CardList />
       </section>
+      </CartProvider>
+      
       <Us />
       <Footer />
     </>

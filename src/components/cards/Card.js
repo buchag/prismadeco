@@ -3,7 +3,7 @@ import Button from './Button';
 import Image from 'next/image';
 import Modal from './Modal';
 
-const Card = ({product}) => {
+const Card = ({product, addToCart}) => {
 
     const {image, title, price} = product;
 
@@ -15,7 +15,7 @@ const Card = ({product}) => {
                 <h2 className='text-left text-sm my-1 mx-2'>{title}</h2>
                 <h2 className='text-left text-sm my-1 mx-2'><b>${price}</b></h2>
             </div>
-           <Modal key={product.id} product={product} />
+           <Modal key={product.id} product={product} addToCart={addToCart}/>
         </figure>
 
         <style jsx>{`

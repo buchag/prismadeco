@@ -88,7 +88,7 @@ const Navbar = () => {
           </ul>
 
           {/* Link carrito de compras */}
-          <Link href="#Info-carrito">
+          <Link href="/#carrito">
             <div className="itemcart">
               <Image src={carrito} alt="Logo carrito" width={25} height={25} />
               <h6 className={montserrat.className}>

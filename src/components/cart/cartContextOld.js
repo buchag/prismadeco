@@ -7,6 +7,8 @@ const initialState = {
 
 export const CartContext = createContext(initialState);
 
+//deberiamos reemplazar cartreducer importando shoppingReducer?
+
 export const cartReducer = (state, action) => {
   switch (action.type) {
     case 'ADD_TO_CART':

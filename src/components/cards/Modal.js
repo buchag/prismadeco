@@ -1,23 +1,45 @@
 import React, { useState, useContext } from "react";
-import { CartContext } from '../cart/cartContext';
+//import { shoppingCart } from "../cart/shoppingCart"; // Importamos el hook shoppingCart
+import {CartContext} from '@/context/CartContext'
 
-const Modal = ({product, addToCart}) => { 
+const Modal = ({product}) => { 
+  const [cart, setCart] = useContext(CartContext);
   const {id, price, title, image} = product
   const [selectedNumber, setSelectedNumber] = useState(1);
   const [priceXqty, updatedPrice] = useState(price);
- 
+
   const handleSelectChange = (event) => {
     setSelectedNumber(event.target.value);
     updatedPrice(Number(price) * event.target.value);
+    setQuantity(event.target.value);
   };
-  const [abrir, setShowModal] = useState(false);
 
+  const [abrir, setShowModal] = useState(false);
   const [quantity, setQuantity] = useState(1);
 
   const handleAddToCart = () => {
-    addToCart(product);
-    //setShowModal(false) // Cerrar el modal después de agregar el producto al carrito
-  };
+    console.log(product)
+    console.log("Cantidad: "+quantity)
+    
+    setCart((currItems) => {
+      const itemExist = currItems.find((item) => item.id === id)
+    });
+
+    if (itemExist) {
+      return currItems.map((item) => {
+        if (item.id === id) {
+          return {...item, quantity: item.quantity + quantity};
+        }else {
+          return item;
+        }
+      })
+    }
+    else{
+      return [...currItems, {...product, quantity}]
+    }
+    setShowModal(false); // Cerramos el modal después de agregar al carrito
+  }
+
 
   return (
     <>
@@ -71,7 +93,7 @@ const Modal = ({product, addToCart}) => {
                   </button>
                   <button
                     className="text-white bg-yellow-500 active:bg-yellow-700 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-                    type="button" onClick={() => handleAddToCart(product)}>
+                    type="button" onClick={handleAddToCart}>
                     Agregar al carro
                   </button>
                 </div>

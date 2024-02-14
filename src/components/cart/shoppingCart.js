@@ -1,14 +1,15 @@
-import {useReducer, useEffect} from 'react' //utilizamos useEffect para cargar los datos del carrito
-import { TYPES } from '@/actions/shoppingActions';
+import {createContext, useReducer, useEffect} from 'react' //utilizamos useEffect para cargar los datos del carrito
+//import { TYPES } from '@/actions/shoppingActions';
 import { shoppingInitialState } from '@/reducers/shoppingInitialState';
 import { shoppingReducer } from '@/reducers/shoppingReducer';
 import cartItem from './cartItem';
 import axios from 'axios';
 
-const shoppingCart = () => {
+
+export const shoppingCart = () => {
     const [state, dispatch] = useReducer(shoppingReducer, shoppingInitialState);
     
-    const {cart} = state;
+    const {cart} = state; //arreglo que viene de initialState
 
     const updateState = async () => {
       const ENDPOINT = {
@@ -49,6 +50,7 @@ const shoppingCart = () => {
             </article>
             <article className="box"></article> 
             <button  onClick={clearCart}>Vaciar Carrito</button>
+
         </div>
         
   )
