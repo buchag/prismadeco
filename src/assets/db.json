@@ -85,5 +85,13 @@
         "featured": true
     }
 ],
-    "cart": []
+    "cart": [
+        {
+            "id": 1000012,
+            "image": "/images/esp-circle-60.jpg",
+            "title": "Espejo Circular 60cm",
+            "price": 38700,
+            "featured": true
+        }
+    ]
 }

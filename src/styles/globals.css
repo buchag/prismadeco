@@ -46,7 +46,7 @@ body {
   background-color: #eef2ec;
   padding: 10px 100px 12px 10px;
   z-index: 1;
-  margin-top: 3em;
+  margin-top: 2.5rem;
 }
 
 
@@ -213,6 +213,35 @@ p {
 /* <<<<<< Home >>>>>> */
 
 .home {
-  padding-top: 110px;
+  padding-top: 105px;
   margin-bottom: -4rem;
+}
+
+.sidebar {
+  width: 20rem;
+  height: auto;
+  border: 1px solid #EEF2EC;
+  position: fixed;
+  background-color: #EEF2EC;
+  padding: 1rem;
+  margin-top: 0.9rem;
+  margin-left: 10.5rem;
+  display: flex;
+  flex-direction: column;
+  h2{
+  color: #646c64;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold; 
+  font-size: 0.9rem;
+  }
+}
+.empty {
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 790px) {
+  .sidebar {
+    margin-left: -12.3rem;
+  }
 }

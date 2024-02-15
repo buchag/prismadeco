@@ -9,6 +9,8 @@ const CardList = () => {
 
     const [db, setDb] = useState(initialDb)
 
+    
+
     const readData = async () => {
         const ENDPOINT = { products: "http://localhost:7000/products" }
         const responseProducts = await axios.get(ENDPOINT.products);

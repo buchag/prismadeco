@@ -9,14 +9,21 @@ import iconofacebook from "../../../public/images/facebook.svg";
 import iconoinstagram from "../../../public/images/instagram.svg";
 import iconotwitter from "../../../public/images/twitter.svg";
 import iconotiktok from "../../../public/images/tiktok.svg";
+import Pushbar from "./Pushbar";
+import { useState } from "react";
 
 const Navbar = () => {
+
+  const [visible, setVisible] = useState(false)
+
+  const toggleVisibility = () => setVisible(!visible)
+
   return (
     <>
       <div className="navegacion">
         <Link href="/" className="logo">
           <Image src={prisma} width={55} />
-           <p className={montserrat.className}><b>Prisma deco</b></p>
+          <p className={montserrat.className}><b>Prisma deco</b></p>
         </Link>
 
         {/* Barra de navegacion */}
@@ -90,13 +97,20 @@ const Navbar = () => {
 
           {/* Link carrito de compras */}
           <Link href="#Info-carrito">
-            <div className="itemcart">
+            <div className="itemcart" onClick={toggleVisibility} >
               <Image src={carrito} alt="Logo carrito" width={25} height={25} />
               <h6 className={montserrat.className}>
                 <span className="contcart">0</span>
               </h6>
             </div>
           </Link>
+          {
+            visible
+              ? (
+                  <Pushbar />
+              )
+              : null
+          }
 
           {/* Menu hamburguesa */}
           <label htmlFor="check" className="openmenu">
