@@ -69,7 +69,7 @@ const Home = () => {
               </button>
             </div>
 
-            <div className={styles.contenedorLogo}>
+            <div className={styles.contenedorLogo} >
               {/* <img src={imagen} alt="Prismadeco Logo" />*/}
               <Image
                 src={imagen}

@@ -109,6 +109,11 @@ const Navbar = () => {
           </label>
         </nav>
       </div>
+      <style jsx>{`
+      div p {
+        color: #646c64;
+      };
+      `}</style>
     </>
   );
 };
