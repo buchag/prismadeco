@@ -9,8 +9,14 @@ import iconofacebook from "../../../public/images/facebook.svg";
 import iconoinstagram from "../../../public/images/instagram.svg";
 import iconotwitter from "../../../public/images/twitter.svg";
 import iconotiktok from "../../../public/images/tiktok.svg";
+import {CartContext} from '@/context/CartContext'
+import { useContext } from "react";
+
 
 const Navbar = () => {
+  
+  const {totalRegistros} = useContext(CartContext);
+
   return (
     <>
       <div className="navegacion">
@@ -92,7 +98,7 @@ const Navbar = () => {
             <div className="itemcart">
               <Image src={carrito} alt="Logo carrito" width={25} height={25} />
               <h6 className={montserrat.className}>
-                <span className="contcart">0</span>
+                <span className="contcart">{totalRegistros}</span>
               </h6>
             </div>
           </Link>

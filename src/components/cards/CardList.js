@@ -22,7 +22,8 @@ const CardList = () => {
     
     return (
         <>
-            <div>
+    <div className='home'>
+<div className='pb-5'>
                 <h2>Articulos Destacados</h2>
                 <h3>«Los más elegidos por nuestros clientes »</h3>
 
@@ -45,7 +46,7 @@ const CardList = () => {
                     </div>
                 </div>
             </div>
-
+                            
             <style jsx>{`
             div h2 {
                 font-size: 1.2rem;
@@ -70,7 +71,7 @@ const CardList = () => {
                     font-size: 1.5rem;
                 }
             }
-           
+        
             @media screen and (min-width: 768px) {
                 div h2 {
                     font-size: 2.4rem;
@@ -89,6 +90,8 @@ const CardList = () => {
                 }
             }
             `}</style>
+         </div>
+            
         </>
     )
 }

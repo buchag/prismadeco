@@ -9,7 +9,7 @@ import About from "@/components/aboutUs/About";
 import CardList from "@/components/cards/CardList";
 import Us from "@/components/aboutUs/Us";
 import Footer from "../components/footer/Footer";
-import { CartProvider } from './../context/CartContext';
+import CartContextProvider  from './../context/CartContext';
 const inter = Inter({ subsets: ["latin"] });
 
 const index = () => {
@@ -23,20 +23,21 @@ const index = () => {
         <link rel="icon" href="/iconprisma.png" />
       </Head>
       <Banner />
+      <CartContextProvider>
       <Navbar />
-      <Home />
+      <div className="home">
+          <Home />
+      </div>
       <section id="servicios">
           <Carousel />
       </section>
       <section id="nosotros">
           <About />
       </section>
-      <CartProvider>
-        <section id="productos">
+      <section id="productos">
           <CardList />
       </section>
-      </CartProvider>
-      
+      </CartContextProvider>
       <Us />
       <Footer />
     </>

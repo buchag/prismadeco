@@ -3,7 +3,9 @@ import React, { useState, useContext } from "react";
 import {CartContext} from '@/context/CartContext'
 
 const Modal = ({product}) => { 
-  const [cart, setCart] = useContext(CartContext);
+
+  const {addToCart, db, showAlertMessage } = useContext(CartContext);
+
   const {id, price, title, image} = product
   const [selectedNumber, setSelectedNumber] = useState(1);
   const [priceXqty, updatedPrice] = useState(price);
@@ -17,29 +19,15 @@ const Modal = ({product}) => {
   const [abrir, setShowModal] = useState(false);
   const [quantity, setQuantity] = useState(1);
 
+  
   const handleAddToCart = () => {
-    console.log(product)
-    console.log("Cantidad: "+quantity)
-    
-    setCart((currItems) => {
-      const itemExist = currItems.find((item) => item.id === id)
-    });
+  
+      //pasamos el producto al carrito  de compras con la cantidad que hemos elegido
+      addToCart({...product, quantity: Number(quantity)});
 
-    if (itemExist) {
-      return currItems.map((item) => {
-        if (item.id === id) {
-          return {...item, quantity: item.quantity + quantity};
-        }else {
-          return item;
-        }
-      })
-    }
-    else{
-      return [...currItems, {...product, quantity}]
-    }
-    setShowModal(false); // Cerramos el modal después de agregar al carrito
+      //y cerramos el modal
+      setShowModal(false); 
   }
-
 
   return (
     <>

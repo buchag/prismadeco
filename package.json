@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "apideco": "json-server --watch src/assets/db.json --port 7000, next dev"
+    "apideco": "json-server --watch src/assets/db.json --port 7000"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
