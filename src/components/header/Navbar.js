@@ -2,13 +2,13 @@ import prisma from "../../images/logo_nav.png";
 import Image from "next/image";
 import { montserrat } from "../../styles/fonts";
 import Link from "next/link";
-import carrito from "../../images/shopping_cart.png";
-import logocerrar from "../../../public/images/cerrar.svg";
+import logocerrar from "../../images/cerrar.svg";
 import logomenu from "../../../public/images/icono.svg";
 import iconofacebook from "../../../public/images/facebook.svg";
 import iconoinstagram from "../../../public/images/instagram.svg";
 import iconotwitter from "../../../public/images/twitter.svg";
 import iconotiktok from "../../../public/images/tiktok.svg";
+import Menu from "../info-cart/Menu";
 import {CartContext} from '@/context/CartContext'
 import { useContext } from "react";
 
@@ -93,7 +93,13 @@ const Navbar = () => {
             </div>
           </ul>
 
-          {/* Link carrito de compras */}
+          <div className={`relative`}>
+            <Menu />
+          </div>
+
+          
+
+          {/* Link carrito de compras 
           <Link href="/#carrito">
             <div className="itemcart">
               <Image src={carrito} alt="Logo carrito" width={25} height={25} />
@@ -102,6 +108,8 @@ const Navbar = () => {
               </h6>
             </div>
           </Link>
+          */}
+        
 
           {/* Menu hamburguesa */}
           <label htmlFor="check" className="openmenu">

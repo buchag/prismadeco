@@ -27,12 +27,18 @@ module.exports = {
       },
       colors: {
         'custom-gray': '#686D67', // Reemplaza este valor hexadecimal por el color exacto que necesitas
+        "transparent": " rgb(241,241,241)",
+        "half-transparent": "rgb(241,241,241,0.8)",
       },
       backgroundImage: {
          'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
            'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
        },
+      transitionProperty: {
+        "width": "width",
+        "height": "height",
+      }
      },
    },
   plugins: [],
