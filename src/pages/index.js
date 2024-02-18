@@ -11,6 +11,7 @@ import axios from "axios";
 import Home from "@/components/home/Home";
 import Navbar from "@/components/header/Navbar";
 import Banner from "@/components/header/Banner";
+import DataContextProvider from "@/context/DataContextProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,7 +28,9 @@ const index = () => {
 
       <main>
         <Banner />
+        <DataContextProvider>
         <Navbar />
+        </DataContextProvider>
         <div className="home">
           <Home />
         </div>
@@ -41,7 +44,9 @@ const index = () => {
         </section>
 
         <section id="productos">
-          <CardList />
+          <DataContextProvider>
+            <CardList />
+          </DataContextProvider>
         </section>
         <Us />
 

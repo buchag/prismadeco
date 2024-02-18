@@ -11,6 +11,7 @@ import iconotwitter from "../../../public/images/twitter.svg";
 import iconotiktok from "../../../public/images/tiktok.svg";
 import Pushbar from "./Pushbar";
 import { useState } from "react";
+import DataContextProvider from "@/context/DataContextProvider";
 
 const Navbar = () => {
 
@@ -104,13 +105,15 @@ const Navbar = () => {
               </h6>
             </div>
           </Link>
+          <DataContextProvider>
           {
             visible
               ? (
                   <Pushbar />
-              )
+                  )
               : null
-          }
+            }
+          </DataContextProvider>
 
           {/* Menu hamburguesa */}
           <label htmlFor="check" className="openmenu">

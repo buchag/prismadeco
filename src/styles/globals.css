@@ -218,14 +218,14 @@ p {
 }
 
 .sidebar {
-  width: 20rem;
+  width: 30rem;
   height: auto;
   border: 1px solid #EEF2EC;
   position: fixed;
   background-color: #EEF2EC;
   padding: 1rem;
   margin-top: 0.9rem;
-  margin-left: 10.5rem;
+  margin-left: 0.9rem;
   display: flex;
   flex-direction: column;
   h2{

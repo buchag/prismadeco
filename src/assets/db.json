@@ -36,7 +36,7 @@
         "featured": false
     },
     {
-        "id": 100006,
+        "id": 1000006,
         "image": "/images/esp-circle-70.png",
         "title": "Espejo Circular 70cm",
         "price": 43500,
@@ -87,7 +87,21 @@
 ],
     "cart": [
         {
-            "id": 1000012,
+            "id": 1000028,
+            "image": "/images/esp-recta-r90180.jpg",
+            "title": "Esp.Rectangular Repartido. 90x180",
+            "price": 118800,
+            "featured": true
+        },
+        {
+            "id": 1000021,
+            "image": "/images/lamp-roma.jpg",
+            "title": "Lámpara Roma",
+            "price": 43000,
+            "featured": true
+        },
+        {
+            "id": 1000022,
             "image": "/images/esp-circle-60.jpg",
             "title": "Espejo Circular 60cm",
             "price": 38700,
