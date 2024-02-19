@@ -93,13 +93,12 @@ const Navbar = () => {
             </div>
           </ul>
 
+          {/* Menu lateral. Muestra informacion del carrito de compras */}
           <div className={`relative`}>
             <Menu />
-          </div>
+          </div>        
 
-          
-
-          {/* Link carrito de compras 
+          {/* Link carrito de compras. "Anterior"
           <Link href="/#carrito">
             <div className="itemcart">
               <Image src={carrito} alt="Logo carrito" width={25} height={25} />
@@ -110,7 +109,6 @@ const Navbar = () => {
           </Link>
           */}
         
-
           {/* Menu hamburguesa */}
           <label htmlFor="check" className="openmenu">
             <Image src={logomenu} width={23} />

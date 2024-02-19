@@ -1,27 +1,25 @@
-
-
 import Image from "next/image";
 import cerrar from "../../images/cerrar.svg"
 import carrito from "../../images/shopping_cart.png"
 
 const Icone = (props) => {
   const { setVisivel, visivel } = props;
-
   return (
     <>
       <div
-        className={`flex flex-col fixed top-11 right-8 z-40 p-5 cursor-pointer`}
+        className={`flex flex-col fixed top-14 right-14 z-40 p-5 cursor-pointer md:top-11 md:right-8`}
         onClick={() => setVisivel(!visivel)}
       >
         <div className={`${visivel ? "hidden" : "flex"}`}>
-          <Image src={carrito} alt="Logo carrito" width={30} height={30} />
+          <Image src={carrito} alt="Logo carrito" width={30} height={30} /> 
+          <p className="numero">0</p>
         </div>
-        <p className={`${visivel ? "hidden" : "numero"}`}>0</p>
 
-        <div className={`${visivel ? "flex" : "hidden"}`}>
+        <div className={`${visivel ? "flex" : "hidden"} fixed top-0 right-0 z-40 p-5 cursor-pointer align-middle`}>
           <Image src={cerrar} alt="cerrar" width={23} height={23} />
         </div>
 
+        {/* Estilos del numero, que muestra la cantidad de articulos del carrito */}
         <style jsx>{`
         .numero {
           position: absolute;
@@ -40,8 +38,6 @@ const Icone = (props) => {
           font-family: 'Roboto', sans-serif;     
         }
       `}</style>
-
-
       </div>
     </>
   );
