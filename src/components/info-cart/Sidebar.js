@@ -2,7 +2,7 @@ import { useState } from "react";
 import Icone from "./Icone";
 import Nav from "./Nav";
 
-const Menu = () => {
+const Sidebar = () => {
   const [visivel, setVisivel] = useState(false);
   return (
     <>
@@ -11,10 +11,10 @@ const Menu = () => {
       <Icone visivel={visivel} setVisivel={setVisivel} />
 
       {/* Nav => Menu lateral, que se desplaza, mostrando la info del carrito */}
-      <Nav visivel={visivel} />
+      <Nav visivel={visivel} setVisivel={setVisivel} />
     </nav>
      </>
   );
 };
 
-export default Menu;
+export default Sidebar;

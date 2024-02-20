@@ -8,7 +8,7 @@ import iconofacebook from "../../../public/images/facebook.svg";
 import iconoinstagram from "../../../public/images/instagram.svg";
 import iconotwitter from "../../../public/images/twitter.svg";
 import iconotiktok from "../../../public/images/tiktok.svg";
-import Menu from "../info-cart/Menu";
+import Sidebar from "../info-cart/Sidebar";
 import {CartContext} from '@/context/CartContext'
 import { useContext } from "react";
 
@@ -96,20 +96,9 @@ const Navbar = () => {
 
           {/* Componente nuevo menu lateral. Muestra informacion del carrito de compras */}
           <div className={`relative`}>
-            <Menu />
+            <Sidebar />
           </div>        
-
-          {/* Link carrito de compras. "Anterior"
-          <Link href="/#carrito">
-            <div className="itemcart">
-              <Image src={carrito} alt="Logo carrito" width={25} height={25} />
-              <h6 className={montserrat.className}>
-                <span className="contcart">{totalRegistros}</span>
-              </h6>
-            </div>
-          </Link>
-          */}
-        
+                  
           {/* Menu hamburguesa */}
           <label htmlFor="check" className="openmenu">
             <Image src={logomenu} width={23} />

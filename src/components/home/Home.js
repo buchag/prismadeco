@@ -64,9 +64,9 @@ const Home = () => {
                   clientes un servicio de calidad y profesionalismo.
                 </p>
               </div>
-              <button className={styles.btnConocerMas}>
+              <a href="#nosotros" className={styles.btnConocerMas}>
                 <span> Conocer más </span>
-              </button>
+              </a>
             </div>
 
             <div className={styles.contenedorLogo} >
