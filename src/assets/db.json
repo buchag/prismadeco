@@ -85,22 +85,5 @@
       "featured": true
     }
   ],
-  "cart": [
-    {
-      "id": "1000001",
-      "image": "/images/esp-mp-90180.jpeg",
-      "title": "Espejo medio punto 90x180",
-      "price": 67900,
-      "featured": true,
-      "quantity": 3
-    },
-    {
-      "id": "1000002",
-      "image": "/images/esp-rect-rep.jpg",
-      "title": "Espejo Rectangular repartido",
-      "price": 163500,
-      "featured": true,
-      "quantity": 5
-    }
-  ]
+  "cart": []
 }

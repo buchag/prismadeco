@@ -1,9 +1,15 @@
 import Image from "next/image";
 import cerrar from "../../images/cerrar.svg"
 import carrito from "../../images/shopping_cart.png"
+import { CartContext } from "@/context/CartContext";
+import { useContext } from "react";
 
 const Icone = (props) => {
+
   const { setVisivel, visivel } = props;
+
+  const { totalRegistros } = useContext(CartContext);
+  
   return (
     <>
       <div
@@ -12,7 +18,7 @@ const Icone = (props) => {
       >
         <div className={`${visivel ? "hidden" : "flex"}`}>
           <Image src={carrito} alt="Logo carrito" width={30} height={30} /> 
-          <p className="numero">0</p>
+          <p className={`${visivel ? "hidden" : "numero"}`}>{totalRegistros}</p>
         </div>
 
         <div className={`${visivel ? "flex" : "hidden"} fixed -top-2 right-2 z-40 p-5 cursor-pointer`}>
