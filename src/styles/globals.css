@@ -223,3 +223,13 @@ p {
   padding-top: 110px;
   margin-bottom: -4rem;
 }
+
+.mensajeOk {
+  background-color: rgba(164, 252, 172, 0.788);
+  border-radius: 8px;
+}
+
+.mensajeInfo {
+  background-color: rgba(252, 126, 126, 0.788);
+  border-radius: 8px;
+}

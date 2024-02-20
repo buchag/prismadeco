@@ -10,8 +10,8 @@ const Banner = () => {
         background: "black",
         zIndex: "1",
         position: "fixed",
-        paddingTop: "0.2em",
-        paddingBottom: "0.6em",
+        paddingTop: "0.5em",
+        paddingBottom: "0.5em",
         top: "0",
         right: "0",
       }}
