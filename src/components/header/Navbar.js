@@ -22,6 +22,7 @@ const Navbar = () => {
       <div className="navegacion">
         <Link href="/" className="logo">
           <Image src={prisma} width={55} />
+            <h1 style={montserrat.style} className="text-2xl">PRISMA DECO</h1>
         </Link>
 
         {/* Barra de navegacion */}
@@ -93,7 +94,7 @@ const Navbar = () => {
             </div>
           </ul>
 
-          {/* Menu lateral. Muestra informacion del carrito de compras */}
+          {/* Componente nuevo menu lateral. Muestra informacion del carrito de compras */}
           <div className={`relative`}>
             <Menu />
           </div>        
@@ -115,11 +116,7 @@ const Navbar = () => {
           </label>
         </nav>
       </div>
-      <style jsx>{`
-      div p {
-        color: #646c64;
-      };
-      `}</style>
+  
     </>
   );
 };

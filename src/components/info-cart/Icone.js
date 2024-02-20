@@ -15,7 +15,7 @@ const Icone = (props) => {
           <p className="numero">0</p>
         </div>
 
-        <div className={`${visivel ? "flex" : "hidden"} fixed top-0 right-0 z-40 p-5 cursor-pointer align-middle`}>
+        <div className={`${visivel ? "flex" : "hidden"} fixed -top-2 right-2 z-40 p-5 cursor-pointer`}>
           <Image src={cerrar} alt="cerrar" width={23} height={23} />
         </div>
 

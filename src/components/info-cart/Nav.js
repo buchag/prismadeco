@@ -14,15 +14,15 @@ const Nav = (props) => {
       <div
         className={`${visivel ? "w-full sm:w-1/3" : "w-0"} font-mono transition-width duration-500 flex flex-col font-bold h-screen fixed pt-0 top-0 right-0 bg-slate-50 items-center`}
       >
-        <div className={`${visivel ? "flex" : "hidden"} text-black w-full sm:w-90 m-1 p-3 bg-[#727D71] text-xl`}>CARRITO DE COMPRAS</div>
+        <div className={`${visivel ? "flex" : "hidden"} text-black w-full sm:w-90 m-0 p-3 bg-[#727D71] text-xl`}>CARRITO DE COMPRAS</div>
 
-        <div className={`${visivel ? "flex" : "hidden"} text-black w-full sm:w-80 pt-20 pb-10 text-xl ml-32`}>¡Tu carrito está vacio!</div>
+        <p className={`${visivel ? "flex" : "hidden"} text-black w-full sm:w-90 pt-20 pb-10 text-xl text-center justify-center items-center`}>¡Tu carrito está vacio!</p>
 
-        <div className={`${visivel ? "flex" : "hidden"} pb-10 items-center`}>
+        <div className={`${visivel ? "flex" : "hidden"} pb-10`}>
           <Image src={carritovacio} alt="cerrar" width={150} height={150} />
         </div>
 
-        <div className={`${visivel ? "flex" : "hidden"} text-black text-xl w-full sm:w-80 ml-56 hover:text-[#727D71]`}>
+        <div className={`${visivel ? "flex" : "hidden"} text-black text-xl w-full sm:w-80 text-center justify-center items-center hover:text-[#727D71]`}>
           <Link href="#productos">Ver productos</Link>
         </div>
 
@@ -32,4 +32,5 @@ const Nav = (props) => {
 }
 
 export default Nav;
+
 
