@@ -24,19 +24,19 @@ const index = () => {
       </Head>
       <Banner />
       <CartContextProvider>
-      <Navbar />
-      <div className="home">
-          <Home />
-      </div>
-      <section id="servicios">
-          <Carousel />
-      </section>
-      <section id="nosotros">
-          <About />
-      </section>
-      <section id="productos">
-          <CardList />
-      </section>
+        <Navbar />
+        <div className="home">
+            <Home />
+        </div>
+        <section id="servicios">
+            <Carousel />
+        </section>
+        <section id="nosotros">
+            <About />
+        </section>
+        <section id="productos">
+            <CardList />
+        </section>
       </CartContextProvider>
       <Us />
       <Footer />

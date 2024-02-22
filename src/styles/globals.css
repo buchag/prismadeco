@@ -1,23 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap");
+
 
 :root {
   --font-principal: 'Roboto', sans-serif;
   --font-secundaria: 'Montserrat', sans-serif;
 }
 
-body {
-  font-family: var(--font-principal);
-  background-image: linear-gradient(#e5e3df, #f0d9b4, #686d67e7);
-}
-
-@tailwind utilities; 
-
-*/
 /* <<<<<< Reset documento >>>>>> */
 
 * {
@@ -31,8 +23,8 @@ body {
 body {
   overflow-x: hidden; 
   min-height: 100vh;
+  font-family: var(--font-principal);
   background-image: linear-gradient(#e5e3df, #c9af91e9, #686d67e7);
-  /*background-color: white;*/
 }
 
 
@@ -113,7 +105,7 @@ p {
 
 .openmenu {
   top: 55%;
-  right: 15px;
+  right: 2rem;
   transform: translateY(-50%);
 }
 
@@ -131,104 +123,79 @@ p {
   display: none;
 }
 
-/* <<<<<< Link carrito de compras >>>>>> */
-
-.itemcart {
-  display: flex;
-  position: fixed;
-  top: 4.2em;
-  right: 0;
-  margin-right: 2em;
-  visibility: visible;
-  z-index: 2;
-}
-
-.contcart {
-  background-color: #727d71;
-  color: white;
-  padding: 4px 6px;
-  border-radius: 10px;
-}
-
-
 /* <<<<<< Responsividad >>>>>> */
 
 @media only screen and (max-width: 790px) {
-.menu {
-  flex-direction: column;
-  align-items: center;
-  justify-content: first baseline;
-  width: 75%;
-  height: 100%;
-  position: fixed;
-  top: 0px;
-  right: -100%;
-  z-index: 300;
-  background-color: rgb(241, 241, 241);
-  transition: all 0.5s ease-in-out;
-  padding-top: 100px;
-}
-
-@media (max-width: 768px) {
-  .component-home {
+  .menu {
     flex-direction: column;
+    align-items: center;
+    justify-content: first baseline;
+    width: 75%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    right: -100%;
+    z-index: 300;
+    background-color: rgb(241, 241, 241);
+    transition: all 0.5s ease-in-out;
+    padding-top: 100px;
   }
-}
 
-.menu li {
-  margin-top: 50px;
-}
+  @media (max-width: 768px) {
+    .component-home {
+      flex-direction: column;
+    }
+  }
 
-.menu li a::after {
-  content: none;
-}
+  .menu li {
+    margin-top: 50px;
+  }
 
-.itemcart {
-  margin-right: 50px;
-  top: 4.7em;
+  .menu li a::after {
+    content: none;
+  }
 
-}
+  .navegacion {
+    margin-top: 3.4em;
+  }
 
-.navegacion {
-  margin-top: 3.4em;
-}
+  .redes {
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
 
+  .redes li a {
+    margin-top: 20px;
+    margin-inline: 15px;
+  }
 
-.redes {
-  visibility: visible;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-}
+  .openmenu , .closemenu {
+    display: block;
+  }
 
-.redes li a {
-  margin-top: 20px;
-  margin-inline: 15px;
-}
-
-.openmenu , .closemenu {
-  display: block;
-}
-
-#check:checked ~ .menu {
-  right: 0;
-}
-
+  #check:checked ~ .menu {
+    right: 0;
+  }
 }
 
 /* <<<<<< Home >>>>>> */
 
+/*soluciona padding de la nav al utilizar los links*/
 .home {
   padding-top: 110px;
   margin-bottom: -4rem;
 }
 
+/*Al agregar correctamente un procuto al carrito, se pasa esta clase junto al mensaje*/
 .mensajeOk {
   background-color: rgba(164, 252, 172, 0.788);
   border-radius: 8px;
 }
 
+/*Si el producto ya existe en el carrito, se pasa el mensaje y  esta clase*/
 .mensajeInfo {
   background-color: rgba(252, 126, 126, 0.788);
   border-radius: 8px;

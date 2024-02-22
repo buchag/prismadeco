@@ -40,7 +40,7 @@ const Footer = () => {
                 <br></br>
                     <div className="item"> 
                       <p>
-                        <img src='./image/instagram.png'/> 
+                        <img src='./image/instagram.png' alt="Imagen instagram"/> 
                           PrismaDeco_
                       </p>
                       <br></br>
@@ -48,7 +48,7 @@ const Footer = () => {
                     
                     <div className="item"> 
                         <p>
-                        <img src='./image/facebook.png'/>
+                        <img src='./image/facebook.png' alt="Imagen facebook"/>
                             PrismaDeco 
                         </p>
                         <br></br>
@@ -56,7 +56,7 @@ const Footer = () => {
                         
                     <div className="item">     
                        <p>
-                       <img src='./image/whatsapp.png'/>  
+                       <img src='./image/whatsapp.png' alt="Imagen whatsapp"/>  
                           11 152 1823 456 
                         </p>
                         <br></br>
@@ -71,8 +71,6 @@ const Footer = () => {
            <div className="copyright" >
             Copyright © 2024 prismadeco | Diseño PRISMA
            </div>
-         
-            
         </div>
 
         

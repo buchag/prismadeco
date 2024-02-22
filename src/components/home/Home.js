@@ -50,6 +50,7 @@ const Home = () => {
             src={home}
             alt="background-home"
             className={styles.homeImagen}
+            priority
           />
           {/*<Image scr={home} alt='background-home' className='h-auto max-w-lg transition-all duration-300 rounded-lg blur-sm hover:blur-none'/>*/}
           <div className={styles.contenido}>
@@ -64,9 +65,9 @@ const Home = () => {
                   clientes un servicio de calidad y profesionalismo.
                 </p>
               </div>
-              <button className={styles.btnConocerMas}>
+              <a href="#nosotros" className={styles.btnConocerMas}>
                 <span> Conocer más </span>
-              </button>
+              </a>
             </div>
 
             <div className={styles.contenedorLogo} >

@@ -2,13 +2,13 @@ import prisma from "../../images/logo_nav.png";
 import Image from "next/image";
 import { montserrat } from "../../styles/fonts";
 import Link from "next/link";
-import carrito from "../../images/shopping_cart.png";
-import logocerrar from "../../../public/images/cerrar.svg";
+import logocerrar from "../../images/cerrar.svg";
 import logomenu from "../../../public/images/icono.svg";
 import iconofacebook from "../../../public/images/facebook.svg";
 import iconoinstagram from "../../../public/images/instagram.svg";
 import iconotwitter from "../../../public/images/twitter.svg";
 import iconotiktok from "../../../public/images/tiktok.svg";
+import Sidebar from "../info-cart/Sidebar";
 import {CartContext} from '@/context/CartContext'
 import { useContext } from "react";
 
@@ -21,7 +21,7 @@ const Navbar = () => {
     <>
       <div className="navegacion">
         <Link href="/" className="logo">
-          <Image src={prisma} width={55} />
+          <Image src={prisma} width={55} alt="Logo prisma deco"/>
         </Link>
 
         {/* Barra de navegacion */}
@@ -29,26 +29,26 @@ const Navbar = () => {
           <input type="checkbox" id="check" />
           <ul className="menu" style={montserrat.style}>
             <li>
-              <Link href="/">Home</Link>
+              <Link href="/" onClick={()=>document.getElementById("check").checked=false}>Home</Link>
             </li>
             <li>
-              <Link href="#servicios">Servicios</Link>
+              <Link href="#servicios" onClick={()=>document.getElementById("check").checked=false}>Servicios</Link>
             </li>
             <li>
-              <Link href="#nosotros">Nosotros</Link>
+              <Link href="#nosotros" onClick={()=>document.getElementById("check").checked=false}>Nosotros</Link>
             </li>
             <li>
-              <Link href="#productos">Productos</Link>
+              <Link href="#productos" onClick={()=>document.getElementById("check").checked=false}>Productos</Link>
             </li>
 
             <label htmlFor="check" className="closemenu">
-              <Image src={logocerrar} width={23} />
+              <Image src={logocerrar} width={23} alt="Cerrar menú lateral"/>
             </label>
 
             {/* Barra de navegacion, redes sociales */}
             <div className="redes">
               <li>
-                <a target="_blank" href="https://facebook.com">
+                <a target="_blank" href="https://facebook.com" onClick={()=>document.getElementById("check").checked=false}>
                   <Image
                     src={iconofacebook}
                     alt="Logo facebook"
@@ -59,7 +59,7 @@ const Navbar = () => {
               </li>
 
               <li>
-                <a target="_blank" href="https://instagram.com">
+                <a target="_blank" href="https://instagram.com" onClick={()=>document.getElementById("check").checked=false}>
                   <Image
                     src={iconoinstagram}
                     alt="Logo instagram"
@@ -70,7 +70,7 @@ const Navbar = () => {
               </li>
 
               <li>
-                <a target="_blank" href="https://twitter.com">
+                <a target="_blank" href="https://twitter.com" onClick={()=>document.getElementById("check").checked=false}>
                   <Image
                     src={iconotwitter}
                     alt="Logo twitter"
@@ -81,7 +81,7 @@ const Navbar = () => {
               </li>
 
               <li>
-                <a target="_blank" href="https://tiktok.com">
+                <a target="_blank" href="https://tiktok.com" onClick={()=>document.getElementById("check").checked=false}>
                   <Image
                     src={iconotiktok}
                     alt="Logo tiktok"
@@ -93,27 +93,18 @@ const Navbar = () => {
             </div>
           </ul>
 
-          {/* Link carrito de compras */}
-          <Link href="/#carrito">
-            <div className="itemcart">
-              <Image src={carrito} alt="Logo carrito" width={25} height={25} />
-              <h6 className={montserrat.className}>
-                <span className="contcart">{totalRegistros}</span>
-              </h6>
-            </div>
-          </Link>
-
+          {/* Componente nuevo menu lateral. Muestra informacion del carrito de compras */}
+          <div className={`relative`}>
+            <Sidebar />
+          </div>        
+                  
           {/* Menu hamburguesa */}
           <label htmlFor="check" className="openmenu">
-            <Image src={logomenu} width={23} />
+            <Image src={logomenu} width={23} alt="Logo hamburguesa"/>
           </label>
         </nav>
       </div>
-      <style jsx>{`
-      div p {
-        color: #646c64;
-      };
-      `}</style>
+  
     </>
   );
 };
