@@ -99,8 +99,38 @@ export const CartContextProvider = ({ children }) => {
         }
     }
 
+    const clearCart = () => {
+        
+        const confirmar = confirm(`¿Seguro que quieres limpiar el carrito?`);
+
+        if (confirmar) {
+            try {
+                db.map(item => {deleteAllFromCart(item)})
+            } catch (error) {
+                return showAlertMessage("Ocurrió un error al limpiar el carrito!", "mensajeInfo");
+            }
+            readData();
+           
+        } else {
+            return
+        }
+    }
+
+    const deleteAllFromCart = async (data) => {
+        const {id} = data;
+
+        const ENDPOINT = `http://localhost:7000/cart/${id}`;
+        const OPTIONS = {
+            method: "DELETE",
+            headers: { "Content-type": "application/json" },
+        }
+        await axios(ENDPOINT, OPTIONS);
+        readData();
+    }
+
+
     return (
-        <CartContext.Provider value={{ db, addToCart, deleteFromCart, updateData, totalRegistros, showAlertMessage }}>
+        <CartContext.Provider value={{ db, addToCart, deleteFromCart,clearCart, updateData, totalRegistros, showAlertMessage }}>
             {showAlert && (
                 <div className="flex justify-top items-top overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none" >
                     <div className=" relative w-auto my-6 mx-auto max-w-3xl">

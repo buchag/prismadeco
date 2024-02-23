@@ -9,8 +9,14 @@ import CartItembar from "./CartItembar";
 const Nav = (props) => {
 
   const { visivel, setVisivel } = props;
-  const { db } = useContext(CartContext);
+  const { db, clearCart } = useContext(CartContext);
   const totalCompra = db.reduce((acc, item) => acc + (item.price * item.quantity), 0)
+
+  const handleClearCart = () => {
+    //pasamos el producto al carrito  de compras con la cantidad que hemos elegido
+    clearCart();
+}
+
 
   return (
 
@@ -38,8 +44,8 @@ const Nav = (props) => {
                     <a href="#productos" onClick={() => setVisivel(!visivel)} className="w-auto mx-8 text-nowrap rounded-lg text-grey text-center bg-slate-100 cursor-pointer font-bold uppercase text-sm py-2 shadow hover:shadow-lg mb-3 px-2" style={montserrat.style}>
                       <b>Seguir comprando</b>
                     </a>
-                    <button className="rounded-lg mx-8 w-auto text-nowrap text-white bg-yellow-500 active:bg-yellow-700 cursor-pointer font-bold uppercase text-sm py-2 shadow hover:shadow-lg mb-3 px-2" style={montserrat.style}>
-                      <b>Ver medios de pago</b>
+                    <button onClick={handleClearCart} className="rounded-lg mx-8 w-auto text-nowrap text-white bg-yellow-500 active:bg-yellow-700 cursor-pointer font-bold uppercase text-sm py-2 shadow hover:shadow-lg mb-3 px-2" style={montserrat.style} >
+                      <b>Limpiar carrito</b>
                     </button>
                   </div>
                 </div>
