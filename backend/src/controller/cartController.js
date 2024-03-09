@@ -1,4 +1,4 @@
-const getAllCartProductsService = require("../../services/cart/getAllProductsService")
+const getAllCartProductsService = require("../services/cart/getAllProductsService")
 
 const getAllCartProductsController = async (_,res) => {
     const products = await getAllCartProductsService(); // el servicio es una función, va con parentesis para ejecutarse

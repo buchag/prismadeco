@@ -7,7 +7,7 @@ const initialDb = [];
 
 // Un componente que proporciona el contexto del carrito
 export const CartContextProvider = ({ children }) => {
- 
+
     const [totalRegistros, setTotalRegistros] = useState(0)
     const [db, setDb] = useState(initialDb)
     const [dataToEdit, setDataToEdit] = useState(null) //capturar la info a editar, por ahora sin uso
