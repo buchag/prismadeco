@@ -106,12 +106,13 @@ export const CartContextProvider = ({ children }) => {
         if (confirmar) {
             try {
                 db.map(item => {deleteAllFromCart(item)})
-            } catch (error) {
+            } 
+            catch (error) {
                 return showAlertMessage("Ocurrió un error al limpiar el carrito!", "mensajeInfo");
             }
             readData();
-           
-        } else {
+        } 
+        else {
             return
         }
     }

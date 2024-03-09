@@ -85,5 +85,14 @@
       "featured": true
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": "1000001",
+      "image": "/images/esp-mp-90180.jpeg",
+      "title": "Espejo medio punto 90x180",
+      "price": 67900,
+      "featured": true,
+      "quantity": 1
+    }
+  ]
 }
