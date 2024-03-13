@@ -44,13 +44,36 @@ export const CartContextProvider = ({ children }) => {
         readData()
     }, [])
 
+    const updateData = async (data) => {
+        
+        const {id} = data; // destructuring, extraigo el id del objeto data.
+        const ENDPOINT = `http://localhost:5000/api/cart/${id}`; // especifico que item queremos editar.
+
+        const OPTIONS = {
+            method: "PUT",
+            headers: {"Content-type": "application/json"},
+            data: JSON.stringify(data)
+        }
+
+        await axios(ENDPOINT, OPTIONS);
+
+        readData(); // le decimos que vuelva a leer la data.
+    }
 
     const addToCart = async (data) => { // la info de (data) viene del form, pero no estoy recibiendo un formulario, estoy recibiendo su data, lo ponemos asi porque queda mejor.
 
             //verificamos si el producto ya existe en el carrito
         const itemExist = db.find((item) => item.id === data.id)
         if (itemExist) {
-        return showAlertMessage(`${data.title} ya se encuentra en el carrito!`, "mensajeInfo");
+            showAlertMessage(`${data.title} ya se encuentra en el carrito!`, "mensajeInfo");
+            setTimeout(() => {
+                const confirmar = confirm("¿Desea actualizar el producto?");
+                if(confirmar) {
+                    //actualizamos el producto
+                    updateData(data)
+                }
+            }, 2800);
+            return;
         }else {
 
             const ENDPOINT = "http://localhost:5000/api/cart" //"http://localhost:7000/cart";
@@ -65,24 +88,9 @@ export const CartContextProvider = ({ children }) => {
         }
     }
 
-    const updateData = async (data) => {
-        
-        const {id} = data; // destructuring, extraigo el id del objeto data.
-        const ENDPOINT = `http://localhost:5000/api/cart/${id}`; // es otro endpoint, le especifico que item queremos editar.
-
-        const OPTIONS = {
-            method: "PUT",
-            headers: {"Content-type": "application/json"},
-            data: JSON.stringify(data)
-        }
-
-        await axios(ENDPOINT, OPTIONS);
-
-        readData(); // le decimos que vuelva a leer la data.
-    }
-
     const deleteFromCart = async (data) => {
         const {id, title} = data;
+        
         const confirmar = confirm(`¿Seguro que quieres eliminar ${title} del carrito?`);
 
         if (confirmar) {
