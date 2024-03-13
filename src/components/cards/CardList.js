@@ -10,11 +10,12 @@ const CardList = () => {
     const [db, setDb] = useState(initialDb)
 
     const readData = async () => {
-        const ENDPOINT = { products: "http://localhost:7000/products" }
-        const responseProducts = await axios.get(ENDPOINT.products);
-        const db = responseProducts.data;
-
-        setDb(db);
+       //const ENDPOINT = { products: "http://localhost:7000/products" }
+       const ENDPOINT = { products: "https://webservice.tcsa.com.ar/API/demo/products?apikey=DemoProductsNumen" }
+       const responseProducts = await axios.get(ENDPOINT.products);
+       const db = responseProducts.data;
+        console.log("DB", db.response);
+        setDb(db.response);
     }
     useEffect(() => {
         readData()

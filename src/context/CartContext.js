@@ -28,8 +28,8 @@ export const CartContextProvider = ({ children }) => {
 
 
     const readData = async () => {
-        //obtenemos los datos de la base
-        const ENDPOINT = "http://localhost:7000/cart";
+        //obtenemos los datos del carrito
+        const ENDPOINT = "http://localhost:5000/api/cart"; //"http://localhost:7000/cart";
         const response = await axios.get(ENDPOINT); 
         const db = await response.data;
         setDb(db);
@@ -53,7 +53,7 @@ export const CartContextProvider = ({ children }) => {
         return showAlertMessage(`${data.title} ya se encuentra en el carrito!`, "mensajeInfo");
         }else {
 
-            const ENDPOINT = "http://localhost:7000/cart";
+            const ENDPOINT = "http://localhost:5000/api/cart" //"http://localhost:7000/cart";
             const OPTIONS = { 
                 method: "POST", 
                 headers: { "Content-type": "application/json" }, // indica en que tipo de notacion vamos a estar interactuando. Lo convierte para que el servidor la interprete.
@@ -68,7 +68,7 @@ export const CartContextProvider = ({ children }) => {
     const updateData = async (data) => {
         
         const {id} = data; // destructuring, extraigo el id del objeto data.
-        const ENDPOINT = `http://localhost:7000/cart/${id}`; // es otro endpoint, le especifico que item queremos editar.
+        const ENDPOINT = `http://localhost:5000/api/cart/${id}`; // es otro endpoint, le especifico que item queremos editar.
 
         const OPTIONS = {
             method: "PUT",
@@ -86,7 +86,7 @@ export const CartContextProvider = ({ children }) => {
         const confirmar = confirm(`¿Seguro que quieres eliminar ${title} del carrito?`);
 
         if (confirmar) {
-            const ENDPOINT = `http://localhost:7000/cart/${id}`;
+            const ENDPOINT = `http://localhost:5000/api/cart/${id}`; //`http://localhost:7000/cart/${id}`;
             const OPTIONS = {
                 method: "DELETE",
                 headers: { "Content-type": "application/json" },
@@ -120,7 +120,7 @@ export const CartContextProvider = ({ children }) => {
     const deleteAllFromCart = async (data) => {
         const {id} = data;
 
-        const ENDPOINT = `http://localhost:7000/cart/${id}`;
+        const ENDPOINT = `http://localhost:5000/api/cart/${id}`;
         const OPTIONS = {
             method: "DELETE",
             headers: { "Content-type": "application/json" },
